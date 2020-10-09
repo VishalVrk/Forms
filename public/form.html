@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+  </head>
+  <style>
+    .groove {
+      border-style: groove;
+      background-color: rgba(198, 231, 217, 0.918);
+      padding: 40px 50px 25px 50px;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <h2>See if you qualify for coronavirus (COVID-19) testing</h2>
+      <p>
+        Test supplies are extremely limited. Help those who need testing the
+        most by answering truthfully.
+      </p>
+      <!-- <div class="container p-3 my-3 border"> -->
+      <div class="groove">
+        <form action="" id="form">
+          <div class="form-group">
+            <label for="email">DATE OF BIRTH</label>
+            <p>Special instructions for minors</p>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter email"
+              name="email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="dob">Patient date of birth</label>
+            <input
+              type="dob"
+              class="form-control"
+              id="dob"
+              placeholder="MM/DD/YYYY"
+              name="pwd"
+            />
+            <p>MM/DD/YYYY</p>
+            <br />
+          </div>
+          <div class="checkbox">
+            <p>
+              <b
+                >Have you experienced any of these symptoms? (Select any that
+                apply)</b
+              >
+            </p>
+            <div class="col-sm-12">
+              <div class="form-group">
+                <label class="form-check-label" for="check1">
+                  <input
+                    type="checkbox"
+                    onclick="myFunction()"
+                    class="form-check-input"
+                    id="check1"
+                    name="vehicle1"
+                    value="fever"
+                  />Fever
+                </label>
+                <label class="form-check-label" for="check2">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="check2"
+                    name="vehicle2"
+                    value="cough"
+                  />Cough
+                </label>
+                <label class="form-check-label" for="check3">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="check3"
+                    name="vehicle2"
+                    value="Nausea or Vomiting"
+                  />Nausea or vomiting
+                </label>
+                <label class="form-check-label" for="check4">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="check4"
+                    name="vehicle1"
+                    value="Diarrhea"
+                  />Diarrhea
+                </label>
+                <label class="form-check-label" for="check5">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="check5"
+                    name="vehicle2"
+                    value="Congestion or runny nose"
+                  />Congestion or runny nose
+                </label>
+                <label class="form-check-label" for="check6">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="check6"
+                    name="vehicle2"
+                    value="New loss of taste or smell"
+                  />New loss of taste or smell </label
+                ><br />
+                <label class="form-check-label" for="check7">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="check7"
+                    name="vehicle1"
+                    value="Chills"
+                  />Chills
+                </label>
+                <label class="form-check-label" for="check8">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="check8"
+                    name="vehicle2"
+                    value="Sore throat"
+                  />Sore throat
+                </label>
+                <label class="form-check-label" for="check9">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="check9"
+                    name="vehicle2"
+                    value="Headache"
+                  />Headache
+                </label>
+                <label class="form-check-label" for="check10">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="check10"
+                    name="vehicle1"
+                    value="Fatigue"
+                  />Fatigue
+                </label>
+                <label class="form-check-label" for="check11">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="check11"
+                    name="vehicle2"
+                    value="Muscle or body aches"
+                  />Muscle or body aches
+                </label>
+                <label class="form-check-label" for="check12">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="check12"
+                    name="vehicle2"
+                    value="Shortness of breath or difficulty breathing"
+                  />Shortness of breath or difficulty breathing
+                </label>
+              </div>
+              <br />
+            </div>
+          </div>
+          <div id="myDIV">
+            <label for="cb"
+              >Approximately what date did your symptoms begin?</label
+            >
+            <input
+              type="cb"
+              class="form-control"
+              id="cb"
+              placeholder="MM/DD/YYYY"
+              name="pwd2"
+            />
+            <p>Hint: MM/DD/YYYY</p>
+            <br />
+          </div>
+
+          <div class="checkbox">
+            <p>
+              <b
+                >Do you have any of the following medical conditions? (Select
+                any that apply)</b
+              >
+            </p>
+            <div class="col-sm-12">
+              <div class="form-group">
+                <label class="form-check-label1" for="che1">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="che1"
+                    name="vehicle1"
+                    value="something"
+                  />Asthma or chronic lung disease
+                </label>
+                <label class="form-check-label" for="che2">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="che2"
+                    name="vehicle2"
+                    value="something"
+                  />Cirrhosis of the liver
+                </label>
+                <label class="form-check-label" for="che3">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="che3"
+                    name="vehicle3"
+                    value="something"
+                  />Serious heart condition, such as congestive heart failure </label
+                ><br />
+                <label class="form-check-label" for="che4">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="che4"
+                    name="vehicle4"
+                    value="something"
+                  />Diabetes
+                </label>
+                <label class="form-check-label" for="che5">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="che5"
+                    name="vehicle5"
+                    value="something"
+                  />Kidney failure or end stage renal disease
+                </label>
+                <label class="form-check-label" for="che6">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="che6"
+                    name="vehicle6"
+                    value="something"
+                  />Conditions that result in a weakened immune system,
+                  including cancer treatment </label
+                ><br />
+                <label class="form-check-label" for="che7">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="che7"
+                    name="vehicle7"
+                    value="something"
+                  />Extreme obesity
+                </label>
+                <label class="form-check-label" for="che8">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="che"
+                    name="vehicle8"
+                    value="something"
+                  />Diseases or conditions that make it harder to cough
+                </label>
+              </div>
+              <br />
+            </div>
+          </div>
+          <p><b>If applicable, are you currently pregnant?</b></p>
+          <div class="form-check-inline">
+            <label class="form-check-label" for="radio1" namr="pregnant?">
+              <input
+                type="radio"
+                class="form-check-input"
+                id="radio1"
+                name="optradio"
+                value="option1"
+              />Yes
+            </label>
+
+            <label class="form-check-label" for="radio2">
+              <input
+                type="radio"
+                class="form-check-input"
+                id="radio1"
+                name="optradio"
+                value="option2"
+              />No
+            </label>
+            <label class="form-check-label" for="radio3">
+              <input
+                type="radio"
+                class="form-check-input"
+                id="radio1"
+                name="optradio"
+                value="option3"
+              />
+              I don't know
+            </label>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-lg-6">
+              <p><b>Do you work in health care?</b></p>
+              <div class="form-group mb-4">
+                <label class="form-check-label" for="radio4" name="healthcare">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    id="radio2"
+                    name="optradio1"
+                    value="option4"
+                  />Yes
+                </label>
+                <label class="form-check-label" for="radio5">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    id="radio2"
+                    name="optradio1"
+                    value="option5"
+                  />No
+                </label>
+              </div>
+              <br />
+              <hr />
+            </div>
+
+            <div class="col-lg-6">
+              <p>
+                <b
+                  >Do you work in a special setting where the risk of COVID-19
+                  transmission may be high?
+                </b>
+                (This may include long-term care, correctional and detention
+                facilities; homeless shelters; assisted-living facilities and
+                group homes.)
+              </p>
+              <div class="form-group mb-4" name="covid19">
+                <label class="form-check-label" for="radio6" name="">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    id="radio6"
+                    name="optradio2"
+                    value="option6"
+                  />Yes
+                </label>
+                <label class="form-check-label" for="radio7">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    id="radio7"
+                    name="optradio2"
+                    value="option7"
+                  />No
+                </label>
+              </div>
+              <hr />
+            </div>
+            <div class="col-lg-6">
+              <p>
+                <b
+                  >Do you work in a special setting where the risk of COVID-19
+                  transmission may be high?
+                </b>
+                (This may include long-term care, correctional and detention
+                facilities; homeless shelters; assisted-living facilities and
+                group homes.)
+              </p>
+              <div class="form-group mb-4">
+                <label class="form-check-label" for="radio8">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    id="radio8"
+                    name="optradio3"
+                    value="option8"
+                  />Yes
+                </label>
+                <label class="form-check-label" for="radio9">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    id="radio9"
+                    name="optradio3"
+                    value="option9"
+                  />No
+                </label>
+              </div>
+              <hr />
+            </div>
+            <div class="col-lg-6">
+              <p>
+                <b
+                  >Are you a resident in a special setting where the risk of
+                  COVID-19 transmission may be high?</b
+                >
+                (This may include long-term care, correctional and detention
+                facilities; homeless shelters; assisted-living facilities and
+                group homes.)
+              </p>
+              <div class="form-group mb-4">
+                <label class="form-check-label" for="radio10">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    id="radio10"
+                    name="optradio4"
+                    value="option10"
+                  />Yes
+                </label>
+                <label class="form-check-label" for="radio11">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    id="radio11"
+                    name="optradio4"
+                    value="option11"
+                  />No
+                </label>
+              </div>
+              <hr />
+            </div>
+
+            <div class="col-lg-6">
+              <p>
+                <b
+                  >Have you been prioritized for testing by a medical
+                  professional?</b
+                >
+              </p>
+              <div class="form-group mb-4">
+                <label class="form-check-label" for="radio12">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    id="radio12"
+                    name="optradio5"
+                    value="option12"
+                  />Yes
+                </label>
+                <label class="form-check-label" for="radio13">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    id="radio13"
+                    name="optradio5"
+                    value="option13"
+                  />No
+                </label>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <p><b>Is this your first time taking the COVID-19 test?</b></p>
+              <div class="form-group mb-4">
+                <label class="form-check-label" for="radio14">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    id="radio14"
+                    name="optradio6"
+                    value="option14"
+                  />Yes
+                </label>
+                <label class="form-check-label" for="radio15">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    id="radio15"
+                    name="optradio6"
+                    value="option15"
+                  />No
+                </label>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="form-group form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" name="remember" />
+              I have answered these questions truthfully and to the best of my
+              knowledge. Should I be eligible and choose to receive COVID-19
+              testing at a CVS location, I acknowledge that I must perform my
+              own nasal swab or bring someone who can do this with me. See how
+              swabbing is performed.
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="button" class="btn btn-link">Cancel</button>
+          <!-- </div> -->
+        </form>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"
+      integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js"
+      integrity="sha512-6Uv+497AWTmj/6V14BsQioPrm3kgwmK9HYIyWP+vClykX52b0zrDGP7lajZoIY1nNlX4oQuh7zsGjmF7D0VZYA=="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#form").validate({
+          rules: {
+            email: {
+              required: true,
+            },
+            pwd: {
+              required: true,
+            },
+            pwd2: {
+              required: true,
+            },
+            remember: {
+              required: true,
+            },
+          },
+          messages: {
+            email: {
+              required: "please enter your email",
+            },
+            pwd: {
+              required: "please enter your date of birth",
+            },
+            pwd2: {
+              required: "please enter the field",
+            },
+            remember: {
+              required: "please click agree ",
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
