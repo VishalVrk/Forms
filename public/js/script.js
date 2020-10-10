@@ -12,7 +12,7 @@ firebase.initializeApp(firebaseConfig);
 
 var messagesRef = firebase.database().ref("Patients");
 
-PatientForm = document.querySelector("#form");
+PatientForm = document.querySelector("#form-patient");
 PatientForm.addEventListener("submit", (e) => {
   e.preventDefault();
   var email = PatientForm["email"].value;
@@ -22,24 +22,52 @@ PatientForm.addEventListener("submit", (e) => {
   var pregnant = radioPregnant();
   var helthEmp = radioHealEmp();
   var Risk = radioRisk();
+  var prioritized = radioprioritized();
+  var splSetting = radiosplSetting();
 
   function radioPregnant() {
-    var Pregnant = document.querySelector("input[name=optradio1]:checked")
-      .value;
+    var Pregnant = document.querySelector("input[name=optradio]:checked").value;
     return Pregnant;
   }
   function radioHealEmp() {
-    var HealEmp = document.querySelector("input[name=optradio2]:checked").value;
+    var HealEmp = document.querySelector("input[name=optradio1]:checked").value;
     return HealEmp;
   }
   function radioRisk() {
-    var Risk = document.querySelector("input[name=optradio3]:checked").value;
+    var Risk = document.querySelector("input[name=optradio2]:checked").value;
     return Risk;
   }
-  console.log(email, dob, pregnant, helthEmp, Risk);
+  function radioprioritized() {
+    var prioritized = document.querySelector("input[name=optradio5]:checked")
+      .value;
+    return prioritized;
+  }
+  function radiosplSetting() {
+    var splSetting = document.querySelector("input[name=optradio4]:checked")
+      .value;
+    return splSetting;
+  }
+  console.log(email, dob, pregnant, helthEmp, Risk, prioritized, splSetting);
+
+  saveMessage(email, dob, pregnant, helthEmp, Risk, prioritized, splSetting);
 });
-function saveMessage() {
+function saveMessage(
+  email,
+  dob,
+  pregnant,
+  helthEmp,
+  Risk,
+  prioritized,
+  splSetting
+) {
   var newMessageRef = messagesRef.push();
-  newMessageRef.set({});
+  newMessageRef.set({
+    email: email,
+    dob: dob,
+    pregnant: pregnant,
+    helthEmp: helthEmp,
+    Risk: Risk,
+    prioritized: prioritized,
+    splSetting: splSetting,
+  });
 }
-// saveMessage();

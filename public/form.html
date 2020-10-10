@@ -7,6 +7,30 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
     />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"
+      integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js"
+      integrity="sha512-6Uv+497AWTmj/6V14BsQioPrm3kgwmK9HYIyWP+vClykX52b0zrDGP7lajZoIY1nNlX4oQuh7zsGjmF7D0VZYA=="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+    </script>
   </head>
   <style>
     .groove {
@@ -25,7 +49,7 @@
       </p>
       <!-- <div class="container p-3 my-3 border"> -->
       <div class="groove">
-        <form action="" id="form">
+        <form id="form-patient">
           <div class="form-group">
             <label for="email">DATE OF BIRTH</label>
             <p>Special instructions for minors</p>
@@ -65,7 +89,7 @@
                     class="form-check-input"
                     id="check1"
                     name="vehicle1"
-                    value="fever"
+                    value="something"
                   />Fever
                 </label>
                 <label class="form-check-label" for="check2">
@@ -74,7 +98,7 @@
                     class="form-check-input"
                     id="check2"
                     name="vehicle2"
-                    value="cough"
+                    value="something"
                   />Cough
                 </label>
                 <label class="form-check-label" for="check3">
@@ -83,7 +107,7 @@
                     class="form-check-input"
                     id="check3"
                     name="vehicle2"
-                    value="Nausea or Vomiting"
+                    value="something"
                   />Nausea or vomiting
                 </label>
                 <label class="form-check-label" for="check4">
@@ -92,7 +116,7 @@
                     class="form-check-input"
                     id="check4"
                     name="vehicle1"
-                    value="Diarrhea"
+                    value="something"
                   />Diarrhea
                 </label>
                 <label class="form-check-label" for="check5">
@@ -101,7 +125,7 @@
                     class="form-check-input"
                     id="check5"
                     name="vehicle2"
-                    value="Congestion or runny nose"
+                    value="something"
                   />Congestion or runny nose
                 </label>
                 <label class="form-check-label" for="check6">
@@ -110,7 +134,7 @@
                     class="form-check-input"
                     id="check6"
                     name="vehicle2"
-                    value="New loss of taste or smell"
+                    value="something"
                   />New loss of taste or smell </label
                 ><br />
                 <label class="form-check-label" for="check7">
@@ -119,7 +143,7 @@
                     class="form-check-input"
                     id="check7"
                     name="vehicle1"
-                    value="Chills"
+                    value="something"
                   />Chills
                 </label>
                 <label class="form-check-label" for="check8">
@@ -128,7 +152,7 @@
                     class="form-check-input"
                     id="check8"
                     name="vehicle2"
-                    value="Sore throat"
+                    value="something"
                   />Sore throat
                 </label>
                 <label class="form-check-label" for="check9">
@@ -137,7 +161,7 @@
                     class="form-check-input"
                     id="check9"
                     name="vehicle2"
-                    value="Headache"
+                    value="something"
                   />Headache
                 </label>
                 <label class="form-check-label" for="check10">
@@ -146,7 +170,7 @@
                     class="form-check-input"
                     id="check10"
                     name="vehicle1"
-                    value="Fatigue"
+                    value="something"
                   />Fatigue
                 </label>
                 <label class="form-check-label" for="check11">
@@ -155,7 +179,7 @@
                     class="form-check-input"
                     id="check11"
                     name="vehicle2"
-                    value="Muscle or body aches"
+                    value="something"
                   />Muscle or body aches
                 </label>
                 <label class="form-check-label" for="check12">
@@ -164,7 +188,7 @@
                     class="form-check-input"
                     id="check12"
                     name="vehicle2"
-                    value="Shortness of breath or difficulty breathing"
+                    value="something"
                   />Shortness of breath or difficulty breathing
                 </label>
               </div>
@@ -180,7 +204,7 @@
               class="form-control"
               id="cb"
               placeholder="MM/DD/YYYY"
-              name="pwd2"
+              name="pwd"
             />
             <p>Hint: MM/DD/YYYY</p>
             <br />
@@ -274,13 +298,13 @@
           </div>
           <p><b>If applicable, are you currently pregnant?</b></p>
           <div class="form-check-inline">
-            <label class="form-check-label" for="radio1" namr="pregnant?">
+            <label class="form-check-label" for="radio1">
               <input
                 type="radio"
                 class="form-check-input"
                 id="radio1"
                 name="optradio"
-                value="option1"
+                value="Yes"
               />Yes
             </label>
 
@@ -290,7 +314,7 @@
                 class="form-check-input"
                 id="radio1"
                 name="optradio"
-                value="option2"
+                value="No"
               />No
             </label>
             <label class="form-check-label" for="radio3">
@@ -299,9 +323,8 @@
                 class="form-check-input"
                 id="radio1"
                 name="optradio"
-                value="option3"
-              />
-              I don't know
+                value="I don't know"
+              />I don't know
             </label>
           </div>
           <hr />
@@ -309,13 +332,13 @@
             <div class="col-lg-6">
               <p><b>Do you work in health care?</b></p>
               <div class="form-group mb-4">
-                <label class="form-check-label" for="radio4" name="healthcare">
+                <label class="form-check-label" for="radio4">
                   <input
                     type="radio"
                     class="form-check-input"
                     id="radio2"
                     name="optradio1"
-                    value="option4"
+                    value="Yes"
                   />Yes
                 </label>
                 <label class="form-check-label" for="radio5">
@@ -324,7 +347,7 @@
                     class="form-check-input"
                     id="radio2"
                     name="optradio1"
-                    value="option5"
+                    value="No"
                   />No
                 </label>
               </div>
@@ -335,30 +358,29 @@
             <div class="col-lg-6">
               <p>
                 <b
-                  >Do you work in a special setting where the risk of COVID-19
-                  transmission may be high?
+                  >In the past 14 days, have you had known or suspected exposure
+                  to the SARS-CoV-2 virus or a COVID-19 patient?
                 </b>
-                (This may include long-term care, correctional and detention
-                facilities; homeless shelters; assisted-living facilities and
-                group homes.)
+                (e.g. been exposed to someone with COVID-19 or been in a large
+                public gathering where exposure is suspected)
               </p>
-              <div class="form-group mb-4" name="covid19">
-                <label class="form-check-label" for="radio6" name="">
+              <div class="form-group mb-4">
+                <label class="form-check-label" for="radio6">
                   <input
                     type="radio"
                     class="form-check-input"
-                    id="radio6"
+                    id="radio3"
                     name="optradio2"
-                    value="option6"
+                    value="Yes"
                   />Yes
                 </label>
                 <label class="form-check-label" for="radio7">
                   <input
                     type="radio"
                     class="form-check-input"
-                    id="radio7"
+                    id="radio3"
                     name="optradio2"
-                    value="option7"
+                    value="No"
                   />No
                 </label>
               </div>
@@ -379,18 +401,18 @@
                   <input
                     type="radio"
                     class="form-check-input"
-                    id="radio8"
+                    id="radio4"
                     name="optradio3"
-                    value="option8"
+                    value="Yes"
                   />Yes
                 </label>
                 <label class="form-check-label" for="radio9">
                   <input
                     type="radio"
                     class="form-check-input"
-                    id="radio9"
+                    id="radio4"
                     name="optradio3"
-                    value="option9"
+                    value="No"
                   />No
                 </label>
               </div>
@@ -411,18 +433,18 @@
                   <input
                     type="radio"
                     class="form-check-input"
-                    id="radio10"
+                    id="radio6"
                     name="optradio4"
-                    value="option10"
+                    value="Yes"
                   />Yes
                 </label>
                 <label class="form-check-label" for="radio11">
                   <input
                     type="radio"
                     class="form-check-input"
-                    id="radio11"
+                    id="radio6"
                     name="optradio4"
-                    value="option11"
+                    value="No"
                   />No
                 </label>
               </div>
@@ -441,18 +463,18 @@
                   <input
                     type="radio"
                     class="form-check-input"
-                    id="radio12"
+                    id="radio7"
                     name="optradio5"
-                    value="option12"
+                    value="Yes"
                   />Yes
                 </label>
                 <label class="form-check-label" for="radio13">
                   <input
                     type="radio"
                     class="form-check-input"
-                    id="radio13"
+                    id="radio7"
                     name="optradio5"
-                    value="option13"
+                    value="No"
                   />No
                 </label>
               </div>
@@ -464,18 +486,18 @@
                   <input
                     type="radio"
                     class="form-check-input"
-                    id="radio14"
+                    id="radio8"
                     name="optradio6"
-                    value="option14"
+                    value="Yes"
                   />Yes
                 </label>
                 <label class="form-check-label" for="radio15">
                   <input
                     type="radio"
                     class="form-check-input"
-                    id="radio15"
+                    id="radio8"
                     name="optradio6"
-                    value="option15"
+                    value="No"
                   />No
                 </label>
               </div>
@@ -492,76 +514,21 @@
               swabbing is performed.
             </label>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-          <button type="button" class="btn btn-link">Cancel</button>
+          <button class="btn btn-primary">Submit</button>
+          <button class="btn btn-link">Cancel</button>
           <!-- </div> -->
         </form>
       </div>
     </div>
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"
-      integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg=="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js"
-      integrity="sha512-6Uv+497AWTmj/6V14BsQioPrm3kgwmK9HYIyWP+vClykX52b0zrDGP7lajZoIY1nNlX4oQuh7zsGjmF7D0VZYA=="
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      function myFunction() {
-        var x = document.getElementById("myDIV");
-        if (x.style.display === "none") {
-          x.style.display = "block";
-        } else {
-          x.style.display = "none";
-        }
-      }
-    </script>
-    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase.js"></script>
     <script src="js/script.js"></script>
-    <script>
-      $(document).ready(function () {
-        $("#form").validate({
-          rules: {
-            email: {
-              required: true,
-            },
-            pwd: {
-              required: true,
-            },
-            pwd2: {
-              required: true,
-            },
-            remember: {
-              required: true,
-            },
-          },
-          messages: {
-            email: {
-              required: "please enter your email",
-            },
-            pwd: {
-              required: "please enter your date of birth",
-            },
-            pwd2: {
-              required: "please enter the field",
-            },
-            remember: {
-              required: "please click agree ",
-            },
-          },
-        });
-      });
-    </script>
   </body>
 </html>
