@@ -41,7 +41,8 @@ function signIn() {
         // ...
         sessionStorage.setItem("id", idToken);
         // alert(idToken);
-        window.location.href = "http://localhost:5501/public/dashboard.html";
+        window.location.href =
+          "https://rivervalley.netlify.app/public/dashboard";
       })
       .catch(function (error) {
         // Handle error
@@ -53,5 +54,5 @@ function signOut() {
   auth.signOut();
   sessionStorage.removeItem("id");
   alert("signedOut");
-  window.location.href = "http://localhost:5501/public/admin.html";
+  window.location.href = "https://rivervalley.netlify.app/public/admin";
 }
