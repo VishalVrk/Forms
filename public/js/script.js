@@ -15,11 +15,11 @@ var messagesRef = firebase.database().ref("Patients");
 PatientForm = document.querySelector("#form-patient");
 PatientForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  var email = PatientForm["email"].value;
   var dob = PatientForm["dob"].value;
-  //   var symptoms =
-  //   var conditions =
+  var symptoms = checkSymp();
+  var conditions = checkCond();
   var pregnant = radioPregnant();
+  var whendate = PatientForm["cb"].value;
   var helthEmp = radioHealEmp();
   var Risk = radioRisk();
   var prioritized = radioprioritized();
@@ -42,32 +42,79 @@ PatientForm.addEventListener("submit", (e) => {
       .value;
     return prioritized;
   }
+  function checkSymp() {
+    var checkedValue = [];
+    var inputElements = document.getElementsByName("vehicle1");
+    for (var i = 0; inputElements[i]; ++i) {
+      if (inputElements[i].checked) {
+        checkedValue.push(inputElements[i].value);
+        //   break;
+      }
+    }
+    return checkedValue;
+  }
+  function checkCond() {
+    var checkedValue = [];
+    var inputElements = document.getElementsByName("vehicle2");
+    for (var i = 0; inputElements[i]; ++i) {
+      if (inputElements[i].checked) {
+        checkedValue.push(inputElements[i].value);
+        //   break;
+      }
+    }
+    return checkedValue;
+  }
   function radiosplSetting() {
     var splSetting = document.querySelector("input[name=optradio4]:checked")
       .value;
     return splSetting;
   }
-  console.log(email, dob, pregnant, helthEmp, Risk, prioritized, splSetting);
+  console.log(
+    dob,
+    pregnant,
+    helthEmp,
+    symptoms,
+    conditions,
+    Risk,
+    prioritized,
+    splSetting,
+    whendate
+  );
 
-  saveMessage(email, dob, pregnant, helthEmp, Risk, prioritized, splSetting);
+  saveMessage(
+    dob,
+    pregnant,
+    helthEmp,
+    symptoms,
+    conditions,
+    Risk,
+    prioritized,
+    splSetting,
+    whendate
+  );
 });
+
 function saveMessage(
-  email,
   dob,
   pregnant,
   helthEmp,
+  symptoms,
+  conditions,
   Risk,
   prioritized,
-  splSetting
+  splSetting,
+  whendate
 ) {
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
-    email: email,
     dob: dob,
     pregnant: pregnant,
     helthEmp: helthEmp,
+    symptoms: symptoms,
+    conditions: conditions,
     Risk: Risk,
     prioritized: prioritized,
     splSetting: splSetting,
+    whendate: whendate,
   });
 }
